@@ -1,13 +1,13 @@
-$(".location").click(function(){
+(function(){
     if(navigator.geolocation)
     {
         navigator.geolocation.getCurrentPosition(function(position){
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
-            weatherForecast(position);
+            //weatherForecast(position);
         })
     }
-}) 
+})();
 
 function weatherForecast(position){
     fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&appid=f140e67f24f32ad183329359c313f9d7")
