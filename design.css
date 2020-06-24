@@ -80,6 +80,7 @@ input:focus{
 .content-below{
     position: relative;
     display: flex;
+    justify-content: center;
     top:140px;
     margin:0 30px;
 }
@@ -137,10 +138,12 @@ input:focus{
 .col-center{
     min-width:80px;
     text-align: center;
-    height:100px;
+    height:auto;
     border-right:1px solid white;
 }
-
+.time,.temperature,.png{
+    padding:5px;
+}
 /* right content */
 .right-content{
     display: block;
@@ -151,7 +154,7 @@ input:focus{
 .row-right,.row-center{
     padding: 15px;
 }
-.five-day{
+.five-day-button{
     color:white;
     text-decoration: none;
 }
@@ -176,4 +179,60 @@ input:focus{
         flex-wrap: wrap;
     }
 
+}
+
+
+
+/* five day forecast */
+.five-day-row-content,.five-day-details-content{
+    display: flex;
+    height: auto;
+}
+.five-day-row-content{
+    justify-content: center;
+}
+.day-0,.day-1,.day-2,.day-3,.day-4,.day-5{
+    width: 450px;
+    min-width:300px;
+    margin:60px;
+    background-color: rgba(56, 56, 56, 0.5);
+    border-radius: 20px;
+}
+.five-day-row-date-0,.five-day-row-date-1,.five-day-row-date-2,.five-day-row-date-3,.five-day-row-date-4,.five-day-row-date-5{
+    padding:15px;
+    border-bottom: 1px solid white;
+}
+.five-day-details{
+    padding:15px;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+}
+.five-day-content-right{
+    padding:15px;
+    border-left:1px solid white;
+    text-align: center;
+}
+.five-day-content-left{
+    padding:15px;
+    text-align: center;
+}
+.five-day-content{
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.five-day-png,.five-day-desc,.five-day-min-max,.five-day-sunrise,.five-day-sunset{
+    padding:8px;
+}
+.five-day-uv-index,.five-day-humidity{
+    padding:15px;
+    text-align: center;
+}
+.five-day-uv-index{
+    border-right:1px solid white;
+    width:177px;
+}
+.five-day-humidity{
+    width:213px;
 }
