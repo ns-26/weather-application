@@ -12,7 +12,10 @@
 function weatherForecast(position){
     fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&appid=f140e67f24f32ad183329359c313f9d7")
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data);
+            updateHomeValues(data);
+        })
         .catch(error => console.log(error))
 }
 
