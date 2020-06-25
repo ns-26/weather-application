@@ -15,6 +15,7 @@ function weatherForecast(position){
         .then(data => {
             console.log(data);
             updateHomeValues(data);
+            updateFiveDaysContent(data);
         })
         .catch(error => console.log(error))
 }
