@@ -30,7 +30,7 @@
                 <div class="content-main">
                     <p class="temp">32°C</p>
                     <p class="weather-desc-present">Weather desc</p>
-                    <p class="aqi">AQI : 54</p>
+                    <p class="aqi">AQI : <span class="aqi-data"></span>54</p>
                 </div>
                 
 
@@ -43,14 +43,24 @@
                             </div>
                         </div>
                         <div class="row-left">
-                            <div class="col col-1">Feels Like : <span class="feels-like-now">XXX</span></div>
-                            <div class="col col-2">Humidity : <span class="humidity-now">XXX</span></div>
+                            <div class="col col-1">
+                                Feels Like : <span class="feels-like-now">XXX</span>
+                            </div>
+                            <div class="col col-2">
+                                Humidity : <span class="humidity-now">XXX</span>
+                            </div>
                         </div>
                         <div class="row-left">
-                            <div class="col col-3">UV Index : <span class="uv-index-now">XXX</span></div>
-                            <div class="col col-4">Pressure : <span class="pressure-now">XXX</span></div>
+                            <div class="col col-3">
+                                UV Index : <span class="uv-index-now">XXX</span>
+                            </div>
+                            <div class="col col-4">
+                                Pressure : <span class="pressure-now">XXX</span>
+                            </div>
                         </div>
                     </div>
+
+
                     <div class="center-content">
                         <div class="row-center row-center-1">
                             Hourly Forecast
@@ -61,7 +71,7 @@
                                     <span class="time-0">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-0">png</span>
+                                    <img src="" class="png-0"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-0">temp</span>
@@ -72,7 +82,7 @@
                                     <span class="time-1">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-1">png</span>
+                                    <img src="" class="png-1"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-1">temp</span>
@@ -83,7 +93,7 @@
                                     <span class="time-2">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-2">png</span>
+                                    <img src="" class="png-2"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-2">temp</span>
@@ -94,7 +104,7 @@
                                     <span class="time-3">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-3">png</span>
+                                    <img src="" class="png-3"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-3">temp</span>
@@ -105,7 +115,7 @@
                                     <span class="time-4">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-4">png</span>
+                                    <img src="" class="png-4"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-4">temp</span>
@@ -116,7 +126,7 @@
                                     <span class="time-5">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-5">png</span>
+                                    <img src="" class="png-5"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-5">temp</span>
@@ -127,7 +137,7 @@
                                     <span class="time-6">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-6">png</span>
+                                    <img src="" class="png-6"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-6">temp</span>
@@ -138,7 +148,7 @@
                                     <span class="time-7">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-7">png</span>
+                                    <img src="" class="png-7"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-7">temp</span>
@@ -149,7 +159,7 @@
                                     <span class="time-8">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-8">png</span>
+                                    <img src="" class="png-8"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-8">temp</span>
@@ -160,7 +170,7 @@
                                     <span class="time-9">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-9">png</span>
+                                    <img src="" class="png-9"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-9">temp</span>
@@ -171,7 +181,7 @@
                                     <span class="time-10">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-10">png</span>
+                                    <img src="" class="png-10"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-10">temp</span>
@@ -182,7 +192,7 @@
                                     <span class="time-11">Time</span>
                                 </div>
                                 <div class="png">
-                                    <span class="png-11">png</span>
+                                    <img src="" class="png-11"></img>
                                 </div>
                                 <div class="temperature">
                                     <span class="temp-11">temp</span>
@@ -190,15 +200,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="right-content">
                         <div class="row-right row-right-0">
                             Forecast
                         </div>
                         <div class="row-right row-right-1">
-                            Today-<span class="weather-desc-today">Weather Desc</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;max/min</span>&emsp;<span class="today-png">png</span>
+                            <span class="today">Today-</span><span class="weather-desc-today">Weather Desc</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span class="max-min-today">max/min</span>&emsp;<img src="" class="today-png"></img>
                         </div>
                         <div class="row-right row-right-2">
-                            Tomorrow-<span class="weather-desc-tommorrow">Weather Desc</span><span>&emsp;&emsp;&emsp;&emsp;max/min</span>&emsp;<span class="tommorow-png">png</span>
+                            <span class="tomorrow">Tomorrow-</span><span class="weather-desc-tomorrow">Weather Desc</span><span>&emsp;&emsp;&emsp;</span><span class="max-min-tomorrow">max/min</span>&emsp;<img src="" class="tomorrow-png"></img>
                         </div>
                         <div class="row-right row-right-3">
                             <a href="fiveday.html" class="five-day-button">5-day Forecast</a>

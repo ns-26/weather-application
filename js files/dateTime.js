@@ -12,11 +12,10 @@ function dateToUnixStamp(year,month,date){
     console.log(datum.getTime()/1000);  
 }
 // dateToUnixStamp("2020","06","21");
-unixTimestamp=1592890200;
-function timestampToDate()
+
+function timestampToDate(unixTimestamp)
 {
     var theDate = new Date(unixTimestamp * 1000);
     dateString = theDate.toGMTString();
-    console.log(dateString );
+    return dateString;
 }
-timestampToDate();

@@ -49,7 +49,6 @@ input:focus{
 }
 .temp{
     position: relative;
-
     font-size:6rem;
     text-align: center;
     top:120px;
@@ -60,7 +59,6 @@ input:focus{
     text-align: center;
     position: relative;
     top:115px;
-    right:23px;
     font-size: 1.5rem;
     margin:0;
 }
@@ -68,7 +66,6 @@ input:focus{
     text-align: center;
     position: relative;
     top:120px;
-    right:48px;
     font-size: 1.5rem;
     margin: 0;
 }
@@ -83,6 +80,7 @@ input:focus{
     justify-content: center;
     top:140px;
     margin:0 30px;
+    flex-wrap: wrap;
 }
 .left-content,.right-content,.center-content{
     background-color: rgba(56, 56, 56, 0.5);
@@ -142,8 +140,9 @@ input:focus{
     border-right:1px solid white;
 }
 .time,.temperature,.png{
-    padding:5px;
+    padding:2px;
 }
+
 /* right content */
 .right-content{
     display: block;
@@ -162,24 +161,31 @@ input:focus{
 }
 .row-right-1{
     border-bottom:1px solid white;
+    height:25px;
 }
 .row-right-2{
     border-bottom:1px solid white;
+    height:25px;
 }
 .row-right-3{
     text-align: center;
 }
-
-
-
-/* media queries */
-@media(max-width:1120px){
-    .content-below{
-        flex-wrap: wrap;
-    }
-
+.today-png{
+    position: relative;
+    bottom:10px;
 }
-
+.today,.weather-desc-today,.max-min-today{
+    position: relative;
+    bottom: 30px;
+}
+.tomorrow,.weather-desc-tomorrow,.max-min-tomorrow{
+    position: relative;
+    bottom: 30px;
+}
+.tomorrow-png{
+    position: relative;
+    bottom:10px;
+}
 
 
 /* five day forecast */
