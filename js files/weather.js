@@ -1,13 +1,18 @@
-(function(){
+function getCoOrds(historical){
     if(navigator.geolocation)
     {
         navigator.geolocation.getCurrentPosition(function(position){
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
-            weatherForecast(position);
+            if(!historical){
+                weatherForecast(position);
+            }
+            return position;
         })
     }
-})();
+}
+var location=getCoOrds(false);
+
 
 function weatherForecast(position){
     fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&appid=f140e67f24f32ad183329359c313f9d7")
@@ -20,7 +25,9 @@ function weatherForecast(position){
         .catch(error => console.log(error))
 }
 
-$(".search-weather").click(function(){
+$(".search-weather").click(searchWeather());
+
+function searchWeather(){
     var searchQuery=$(".search-query").val();
     console.log(searchQuery);
     if(searchQuery != ""){
@@ -37,16 +44,18 @@ $(".search-weather").click(function(){
             position.coords.longitude=data.coord.lon;
             position.coords.latitude=data.coord.lat;
             //will be called if more deatils are needed
-            //weatherForecast(position); 
+            weatherForecast(position); 
         })
         .catch(error => console.log(error))
     }
-    
-})
+}
 
 
-function historicalForecast(){
-    fetch("http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1592736487&appid=f140e67f24f32ad183329359c313f9d7")
+$(".nav-item-historical").click(function(){
+    var date=""
+});
+function historicalForecast(position,date){
+    fetch("http://api.openweathermap.org/data/2.5/onecall/timemachine?lat="+position.coords.latitude+"&lon="+position.coord.longitude+"&dt="+date+"&appid=f140e67f24f32ad183329359c313f9d7")
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log(error))

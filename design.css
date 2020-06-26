@@ -220,6 +220,8 @@ input:focus{
 .five-day-content-left{
     padding:15px;
     text-align: center;
+    position: relative;
+    right:20px;
 }
 .five-day-content{
     color:white;
@@ -227,8 +229,9 @@ input:focus{
     flex-wrap: wrap;
     justify-content: center;
 }
-.five-day-png,.five-day-desc,.five-day-min-max,.five-day-sunrise,.five-day-sunset{
-    padding:8px;
+.five-day-min-max,.five-day-sunrise,.five-day-sunset{
+    padding:10px;
+    padding-left:50px;
 }
 .five-day-uv-index,.five-day-humidity{
     padding:15px;
@@ -236,7 +239,7 @@ input:focus{
 }
 .five-day-uv-index{
     border-right:1px solid white;
-    width:177px;
+    width:163px;
 }
 .five-day-humidity{
     width:213px;
@@ -275,6 +278,8 @@ input:focus{
 .historical-content-left{
     padding:15px;
     text-align: center;
+    position: relative;
+    right:40px;
 }
 .historical-content{
     color:white;
@@ -282,8 +287,9 @@ input:focus{
     flex-wrap: wrap;
     justify-content: center;
 }
-.historical-png,.historical-desc,.historical-min-max,.historical-sunrise,.historical-sunset{
-    padding:8px;
+.historical-min-max,.historical-sunrise,.historical-sunset{
+    padding:10px;
+    padding-left:50px;
 }
 .historical-uv-index,.historical-humidity{
     padding:15px;
@@ -291,7 +297,7 @@ input:focus{
 }
 .historical-uv-index{
     border-right:1px solid white;
-    width:177px;
+    width:163px;
 }
 .historical-humidity{
     width:213px;

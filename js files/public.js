@@ -4,12 +4,12 @@ function calcTime(city, offset) {
     var nd = new Date(utc + (3600000*offset));
     return "The local time for city"+ city +" is "+ nd.toLocaleString();
 }
-// var currentDateTime=calcTime('Kolkata', '+5.5');
+var currentDateTime=calcTime('Kolkata', '+5.5');
 // console.log(currentDateTime);
 function dateToUnixStamp(year,month,date){
     var datum = new Date(Date.UTC(year,month,date));
     unixTimestamp=datum.getTime()/1000;
-    console.log(datum.getTime()/1000);  
+    return unixTimestamp; 
 }
 // dateToUnixStamp("2020","06","21");
 
