@@ -49,14 +49,39 @@ function searchWeather(){
             position.coords.longitude=data.coord.lon;
             position.coords.latitude=data.coord.lat;
             //will be called if more deatils are needed
-            //weatherForecast(position); 
+            //weatherForecast(position);
+
+        })
+        .catch(error => console.log(error))
+    }
+}
+$(".historical-search-location-button").click(searchHistoricalWeather);
+
+function searchHistoricalWeather(){
+    var searchQuery=$(".search-location").val();
+    console.log(searchQuery);
+    if(searchQuery != ""){
+        fetch("https://api.openweathermap.org/data/2.5/weather?q="+searchQuery+"&appid=f140e67f24f32ad183329359c313f9d7")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            position={
+                coords:{
+                    longitude:0,
+                    latitude:0,
+                },
+            }
+            position.coords.longitude=data.coord.lon;
+            position.coords.latitude=data.coord.lat;
+            //will be called if more deatils are needed
+            //historicalData(position);
+
         })
         .catch(error => console.log(error))
     }
 }
 
-
-$(".historical-content-button").click(function(){
+$(".historical-current-location-button").click(function(){
     getCoOrds(true);
 });
 

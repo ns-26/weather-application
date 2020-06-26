@@ -103,8 +103,13 @@ function updateHistoryValues(data,i){
     $(select).html(data.current.humidity+"%");
 }
 
-$(".historical-content-button").click(function(){
+$(".historical-current-location-button").click(function(){
     $(".historical-content-display").hide();
     $(".historical-content").fadeIn();
 })
+$(".historical-search-location-button").click(function(){
+    $(".historical-content-display").hide();
+    $(".historical-content").fadeIn();
+})
+
 
