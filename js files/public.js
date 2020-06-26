@@ -1,10 +1,13 @@
-function calcTime(city, offset) {
-    var d = new Date();
-    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-    var nd = new Date(utc + (3600000*offset));
-    return "The local time for city"+ city +" is "+ nd.toLocaleString();
+function calcTime() {
+    var currentdate = new Date(); 
+    var dateTime = {};
+    dateTime.date=currentdate.getDate();
+    dateTime.month=currentdate.getMonth();
+    dateTime.year=currentdate.getFullYear() ;
+    return dateTime;
 }
-var currentDateTime=calcTime('Kolkata', '+5.5');
+
+
 // console.log(currentDateTime);
 function dateToUnixStamp(year,month,date){
     var datum = new Date(Date.UTC(year,month,date));

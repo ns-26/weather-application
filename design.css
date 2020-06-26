@@ -247,6 +247,24 @@ input:focus{
 
 
 /* historical forecast */
+.historical-content-display{
+    text-align:center;
+    color:white;
+    font-size:1.8rem;
+    position: relative;
+    top:120px;
+}
+.historical-content-button{
+    color:black;
+    font-size:1.2rem;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    border-style:solid;
+    border-color: #2c111196;
+    margin:0;
+    background-color: white;
+}
 .historical-row-content,.historical-details-content{
     display: flex;
     height: auto;
