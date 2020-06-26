@@ -26,4 +26,62 @@ function updateHomeValues(data){
     $(".weather-desc-tomorrow").html(uppercase(data.daily[1].weather[0].description));
     $(".max-min-tomorrow").html(Math.round(kToC(data.daily[1].temp.max))+"°C/"+Math.round(kToC(data.daily[1].temp.min))+"°C");
     $(".tomorrow-png").attr("src","images/png/"+data.daily[1].weather[0].icon+".png");
+
+    // background Image
+    // $("body").css("background-image", "url('/images/clear day.jpg')");
+    var weatherId=data.current.weather[0].id;
+    var gmtTime=timestampToDate(data.current.dt);
+    gmtTime=gmtTime.substring(17,19);
+    actualTime=6+parseInt(gmtTime);
+    actualTime=actualTime%24;
+    console.log(actualTime);
+    if(actualTime>=6&&time<=18)
+    {
+        if(Math.round(weatherId/100)==2||Math.round(weatherId/100)==3||Math.round(weatherId/100)==5){
+            $("body").css("background-image", "url('/images/rainy day.jpeg')");
+        }
+        else if(Math.round(weatherId/100)==6)
+        {
+            $("body").css("background-image", "url('/images/snowy day.jpg')");
+        }
+        else if(Math.round(weatherId/100)==7)
+        {
+            $("body").css("background-image", "url('/images/misty day.jpg')");
+        }
+        else if(weatherId==800)
+        {
+            $("body").css("background-image", "url('/images/clear day.jpg')");
+        }
+        else if(Math.round(weatherId/100)==8)
+        {
+            $("body").css("background-image", "url('/images/cloudy day.jpg')");
+        }
+        else{
+            $("body").css("background-image", "url('/images/clear day.jpg')");
+        }
+    }
+    else{
+        if(Math.round(weatherId/100)==2||Math.round(weatherId/100)==3||Math.round(weatherId/100)==5){
+            $("body").css("background-image", "url('/images/rainy day.jpeg')");
+        }
+        else if(Math.round(weatherId/100)==6)
+        {
+            $("body").css("background-image", "url('/images/snowy day.jpg')");
+        }
+        else if(Math.round(weatherId/100)==7)
+        {
+            $("body").css("background-image", "url('/images/misty day.jpg')");
+        }
+        else if(weatherId==800)
+        {
+            $("body").css("background-image", "url('/images/clear night.jpg')");
+        }
+        else if(Math.round(weatherId/100)==8)
+        {
+            $("body").css("background-image", "url('/images/cloudy night.jpg')");
+        }
+        else{
+            $("body").css("background-image", "url('/images/clear day.jpg')");
+        }
+    }
 }

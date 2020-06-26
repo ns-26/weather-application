@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    $("body").hide();
+    setTimeout(function(){
+        $("body").fadeIn();
+    },1500)
+});
+
+
+
 function calcTime() {
     var currentdate = new Date(); 
     var dateTime = {};

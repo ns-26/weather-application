@@ -1,6 +1,6 @@
 body{
     font-family: 'Asap', sans-serif;
-    background: url(images/cloudy\ night.jpg) no-repeat center center fixed; 
+    background: url(images/rainy\ day.jpeg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -122,7 +122,7 @@ input:focus{
 
 /* center content */
 .center-content{
-    width:330px;
+    width:322px;
     height:200px;
     overflow:auto;
 }
@@ -146,7 +146,7 @@ input:focus{
 /* right content */
 .right-content{
     display: block;
-    width:400px;
+    width:408px;
     height: auto;
 }
 .row-right,.row-center{
