@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    $("body").hide();
+    $(".page-content").hide();
     setTimeout(function(){
-        $("body").fadeIn();
-    },1500)
+        $(".ani").fadeOut();
+        $(".page-content").fadeIn();
+    },5000)
 });
-
 
 
 function calcTime() {

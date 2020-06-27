@@ -62,7 +62,7 @@ function updateHistoryValues(data,i){
     select=".historical-desc-"+i;
     $(select).html(uppercase(data.current.weather[0].description));
     select=".historical-min-max-"+i;
-    $(select).html(Math.round(kToC(data.current.temp))+"°C/");
+    $(select).html(Math.round(kToC(data.current.temp))+"°C");
     select=".historical-sunrise-"+i;
     var hour=timestampToDate(data.current.sunrise);
     hour=hour.substring(17,19);

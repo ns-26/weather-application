@@ -5,10 +5,10 @@ function getCoOrds(historical){
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
             if(!historical){
-                //weatherForecast(position);
+                weatherForecast(position);
             }
             else{
-                //historicalData(position);
+                historicalData(position);
             }
         })
     }
@@ -49,7 +49,7 @@ function searchWeather(){
             position.coords.longitude=data.coord.lon;
             position.coords.latitude=data.coord.lat;
             //will be called if more deatils are needed
-            //weatherForecast(position);
+            weatherForecast(position);
 
         })
         .catch(error => console.log(error))
@@ -74,7 +74,7 @@ function searchHistoricalWeather(){
             position.coords.longitude=data.coord.lon;
             position.coords.latitude=data.coord.lat;
             //will be called if more deatils are needed
-            //historicalData(position);
+            historicalData(position);
 
         })
         .catch(error => console.log(error))

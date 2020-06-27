@@ -35,7 +35,7 @@ function updateHomeValues(data){
     actualTime=6+parseInt(gmtTime);
     actualTime=actualTime%24;
     console.log(actualTime);
-    if(actualTime>=6&&time<=18)
+    if(actualTime>=6&&actualTime<=18)
     {
         if(Math.round(weatherId/100)==2||Math.round(weatherId/100)==3||Math.round(weatherId/100)==5){
             $("body").css("background-image", "url('/images/rainy day.jpeg')");
