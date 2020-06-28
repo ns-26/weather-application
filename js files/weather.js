@@ -162,7 +162,7 @@ function historicalForecast(position,dates){
     dates.forEach(function(date){
         var timeStamp=dateToUnixStamp(date.year,date.month,date.date);
         console.log(timeStamp);
-        fetch("http://api.openweathermap.org/data/2.5/onecall/timemachine?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&dt="+timeStamp+"&appid=f140e67f24f32ad183329359c313f9d7")
+        fetch("https://api.openweathermap.org/data/2.5/onecall/timemachine?lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&dt="+timeStamp+"&appid=f140e67f24f32ad183329359c313f9d7")
         .then(response => response.json())
         .then(data => {
             console.log(data);

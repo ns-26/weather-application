@@ -38,50 +38,50 @@ function updateHomeValues(data){
     if(actualTime>=6&&actualTime<=18)
     {
         if(Math.round(weatherId/100)==2||Math.round(weatherId/100)==3||Math.round(weatherId/100)==5){
-            $("body").css("background-image", "url('/images/rainy day.jpeg')");
+            $("body").css("background-image", "url('images/rainy day.jpeg')");
         }
         else if(Math.round(weatherId/100)==6)
         {
-            $("body").css("background-image", "url('/images/snowy day.jpg')");
+            $("body").css("background-image", "url('images/snowy day.jpg')");
         }
         else if(Math.round(weatherId/100)==7)
         {
-            $("body").css("background-image", "url('/images/misty day.jpg')");
+            $("body").css("background-image", "url('images/misty day.jpg')");
         }
         else if(weatherId==800)
         {
-            $("body").css("background-image", "url('/images/clear day.jpg')");
+            $("body").css("background-image", "url('images/clear day.jpg')");
         }
         else if(Math.round(weatherId/100)==8)
         {
-            $("body").css("background-image", "url('/images/cloudy day.jpg')");
+            $("body").css("background-image", "url('images/cloudy day.jpg')");
         }
         else{
-            $("body").css("background-image", "url('/images/clear day.jpg')");
+            $("body").css("background-image", "url('images/clear day.jpg')");
         }
     }
     else{
         if(Math.round(weatherId/100)==2||Math.round(weatherId/100)==3||Math.round(weatherId/100)==5){
-            $("body").css("background-image", "url('/images/rainy day.jpeg')");
+            $("body").css("background-image", "url('images/rainy day.jpeg')");
         }
         else if(Math.round(weatherId/100)==6)
         {
-            $("body").css("background-image", "url('/images/snowy day.jpg')");
+            $("body").css("background-image", "url('images/snowy day.jpg')");
         }
         else if(Math.round(weatherId/100)==7)
         {
-            $("body").css("background-image", "url('/images/misty day.jpg')");
+            $("body").css("background-image", "url('images/misty day.jpg')");
         }
         else if(weatherId==800)
         {
-            $("body").css("background-image", "url('/images/clear night.jpg')");
+            $("body").css("background-image", "url('images/clear night.jpg')");
         }
         else if(Math.round(weatherId/100)==8)
         {
-            $("body").css("background-image", "url('/images/cloudy night.jpg')");
+            $("body").css("background-image", "url('images/cloudy night.jpg')");
         }
         else{
-            $("body").css("background-image", "url('/images/clear day.jpg')");
+            $("body").css("background-image", "url('images/clear day.jpg')");
         }
     }
 }
