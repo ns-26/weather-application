@@ -116,7 +116,7 @@ function historicalData(position){
             dates.push(temp);
         }
         else if(presentMonth>=0){
-            todayMonth-=1;
+            presentMonth-=1;
             if(leap){
                 presentDate=leapMonths[presentMonth];
                 var temp={};
